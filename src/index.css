@@ -211,8 +211,8 @@ blockquote>p {
 .sender-name {
     font-size: 1.5rem;
     font-weight: bold;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    /* text-overflow: ellipsis; */
 }
 
 .twitter-name {
