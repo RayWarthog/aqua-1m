@@ -34,17 +34,11 @@ async function build_html() {
         record => {
             let timestamp = record[0];
             let username = record[1].trim();
-            let twitter = record[3].trim();
-            let country = record[4];
-            let message = record[5];
-            let message_jp = record[8];
+            let country = record[2];
+            let message = record[3];
 
             let country_code = '';
             let country_name = '';
-
-            if (record[6] !== '') {
-                message = record[6];
-            }
             
             if (country) {
                 search_country_code = countries.getAlpha2Code(country, 'en');
@@ -61,118 +55,21 @@ async function build_html() {
             // if there is no JP character and translation is not provided, then the message is in JP
             var isMsgInJP = !(jpCharacters === null) && record[6] === ""
 
-            
-            if (twitter.startsWith("@") || twitter.startsWith("＠")) {
-                twitter = twitter.substring(1);
-            }
-
             message_row = {
                 timestamp: timestamp,
                 username: username,
-                twitter: twitter,
                 country: country,
                 country_name: country_name,
                 country_code: country_code,
                 message: message,
-                isMsgInJP: isMsgInJP,
-                message_jp: message_jp
+                isMsgInJP: isMsgInJP
             };
             message_data.push(message_row);
         }
     );
 
-    // Cover.png
-    // Page_1.png
-    // Page_10-11.png
-    // Page_12-13.png
-    // Page_14-15.png
-    // Page_16-17.png
-    // Page_18-19.png
-    // Page_2-3.png
-    // Page_20-21.png
-    // Page_22-23.png
-    // Page_24.png
-    // Page_4-5.png
-    // Page_6-7.png
-    // Page_8-9.png
-
-    // ori, thumbnail name
-    let artbook_data = [
-        {
-            fullpage: "artbook/Cover.png", 
-            thumbnail: "artbook/thumbs/Cover_t.jpg",
-            thumbnail_small: "artbook/thumbs_small/Cover_t.jpg",
-        },
-        {
-            fullpage: "artbook/Page_1.png", 
-            thumbnail: "artbook/thumbs/Page_1_t.jpg",
-            thumbnail_small: "artbook/thumbs_small/Page_1_t.jpg",
-        },
-        {
-            fullpage: "artbook/Page_2-3.png",
-            thumbnail: "artbook/thumbs/Page_2-3_t.jpg",
-            thumbnail_small: "artbook/thumbs_small/Page_2-3_t.jpg",
-        },
-        {
-            fullpage: "artbook/Page_4-5.png",
-            thumbnail: "artbook/thumbs/Page_4-5_t.jpg",
-            thumbnail_small: "artbook/thumbs_small/Page_4-5_t.jpg",
-        },
-        {
-            fullpage: "artbook/Page_6-7.png",
-            thumbnail: "artbook/thumbs/Page_6-7_t.jpg",
-            thumbnail_small: "artbook/thumbs_small/Page_6-7_t.jpg",
-        },
-        {
-            fullpage: "artbook/Page_8-9.png",
-            thumbnail: "artbook/thumbs/Page_8-9_t.jpg",
-            thumbnail_small: "artbook/thumbs_small/Page_8-9_t.jpg",
-        },
-        {
-            fullpage: "artbook/Page_10-11.png",
-            thumbnail: "artbook/thumbs/Page_10-11_t.jpg",
-            thumbnail_small: "artbook/thumbs_small/Page_10-11_t.jpg",
-        },
-        {
-            fullpage: "artbook/Page_12-13.png",
-            thumbnail: "artbook/thumbs/Page_12-13_t.jpg",
-            thumbnail_small: "artbook/thumbs_small/Page_12-13_t.jpg",
-        },
-        {
-            fullpage: "artbook/Page_14-15.png",
-            thumbnail: "artbook/thumbs/Page_14-15_t.jpg",
-            thumbnail_small: "artbook/thumbs_small/Page_14-15_t.jpg",
-        },
-        {
-            fullpage: "artbook/Page_16-17.png",
-            thumbnail: "artbook/thumbs/Page_16-17_t.jpg",
-            thumbnail_small: "artbook/thumbs_small/Page_16-17_t.jpg",
-        },
-        {
-            fullpage: "artbook/Page_18-19.png",
-            thumbnail: "artbook/thumbs/Page_18-19_t.jpg",
-            thumbnail_small: "artbook/thumbs_small/Page_18-19_t.jpg",
-        },
-        {
-            fullpage: "artbook/Page_20-21.png",
-            thumbnail: "artbook/thumbs/Page_20-21_t.jpg",
-            thumbnail_small: "artbook/thumbs_small/Page_20-21_t.jpg",
-        },
-        {
-            fullpage: "artbook/Page_22-23.png",
-            thumbnail: "artbook/thumbs/Page_22-23_t.jpg",
-            thumbnail_small: "artbook/thumbs_small/Page_22-23_t.jpg",
-        },
-        {
-            fullpage: "artbook/Page_24.png",
-            thumbnail: "artbook/thumbs/Page_24_t.jpg",
-            thumbnail_small: "artbook/thumbs_small/Page_24_t.jpg",
-        }
-    ]
-
     let template_data = {
-        messages: message_data,
-        artbook_data: artbook_data
+        messages: message_data
     };
     let htmlminoptions = {
         minifyCSS: true,

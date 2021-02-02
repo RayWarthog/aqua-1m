@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>あくあちゃんの誕生日プロジェクト Aqua-Chan Birthday Project</title>
-    <meta name="description" content="あくたん、お誕生日おめでとう！！！！！">
+    <title>Minato Aqua 1 Million project</title>
+    <meta name="description" content="Aqua-Chan, congrats on achieving 1 Million subscribers!!!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:title" content="あくあちゃんの誕生日プロジェクト Aqua-Chan Birthday Project" />
-    <meta property="og:description" content="あくたん、お誕生日おめでとう！！！！！" />
-    <meta property="og:image" content="https://raywarthog.github.io/aqua-birthday/dist/img/aqua.png">
+    <meta property="og:title" content="Minato Aqua 1 Million project" />
+    <meta property="og:description" content="Aqua-Chan, congrats on achieving 1 Million subscribers!!!" />
+    <meta property="og:image" content="https://raywarthog.github.io/aqua-1m/artbook/aqua.jpg">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://raywarthog.github.io/aqua-birthday/">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="あくあちゃんの誕生日プロジェクト Aqua-Chan Birthday Project">
-    <meta name="twitter:image" content="https://raywarthog.github.io/aqua-birthday/dist/img/aqua.png">
+    <meta name="twitter:title" content="Minato Aqua 1 Million project">
+    <meta name="twitter:image" content="https://raywarthog.github.io/aqua-1m/artbook/aqua.jpg">
 
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -45,68 +45,20 @@
     <link rel="stylesheet" href="dist/index.css">
 
 <body>
-    <div id="white-full"></div>
-    <div id="init-page">
-        <div id="door-container">
-            <div id="door-frame"></div>
-            <div id="door_back"></div>
-            <div id="door"></div>
-            <div id="door-hint">
-                <div class="loadingio-spinner-ripple-3zk4unnnmgj">
-                    <div class="ldio-7p7zzvmvrrd">
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div id="bg-container">
         <div id="bg">
             <div id="bg-inner-box"></div>
         </div>
     </div>
-    <div id="content" style="display: none">
+    <div id="content">
         <section id="welcome-msg">
-            <p lang="ja" data-aos="fade-down">あくあちゃんお誕生日おめでとう</p>
-            <p lang="ja" data-aos="fade-down">海外ニキから</p>
-            <p lang="ja" data-aos="fade-down">あくあちゃんが私たちからのこの小さなプレゼントを楽しんでください</p>
+            <p lang="ja" data-aos="fade-down">Aqua-Chan, congrats on achieving 1 Million subscribers!!!</p>
             <div id="scroll-arrow-hint">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </section>
-
-        <section id="cover-video">
-            <div class="sect-title" data-aos="fade-up">
-                <h1>Cover MV</h1>
-                <div class="sect-title-deco"></div>
-            </div>
-            <div id="cover-video-container" data-aos="fade-up">
-                <div class="video-container">
-                    <iframe title="あくあちゃんお誕生日おめでとう！" src="https://www.youtube-nocookie.com/embed/0NOcQ9IOX9U"
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
-        </section>
-
-        {{!-- <section id="cover-audio">
-            <div class="sect-title" data-aos="fade-up">
-                <h1>Cover Mix (Full)</h1>
-                <h3 lang="ja">Cover (オーディオのみ)</h3>
-                <div class="sect-title-deco"></div>
-            </div>
-            <div id="cover-audio-container" data-aos="fade-up">
-                <audio controls>
-                    <source src="audio/Blessing_resistance.webm" type="audio/webm">
-                    <source src="audio/Blessing_resistance.ogg" type="audio/ogg">
-                    <source src="audio/Blessing_resistance.mp3" type="audio/mp3">
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        </section> --}}
 
         <section id="birthday-msgs">
             <div class="sect-title" data-aos="fade-up">
@@ -156,16 +108,37 @@
 
         <section id="artbook">
             <div class="sect-title" data-aos="fade-up">
-                <h1>Artbook (Click to enlarge)</h1>
-                <h3 lang="ja">画集（写真をクリックすると拡大します）</h3>
+                <h1>Art</h1>
                 <div class="sect-title-deco"></div>
             </div>
             <div id="artbook-gallery">
-                {{#each artbook_data}}
-                <a href="{{fullpage}}" data-aos="fade-up">
-                    <img class="artbook-page" srcset="{{thumbnail_small}} 150w, {{thumbnail}} 500w" sizes="(max-width: 700px) 150px, 500px" src="{{thumbnail}}" alt="" title="" />
+                <a href="artbook/aqua.jpg" data-aos="fade-up">
+                    <img class="artbook-page" srcset="artbook/thumbnail_small/aqua_t.jpg 150w, artbook/thumbnail/aqua_t.jpg 500w" sizes="(max-width: 700px) 150px, 500px" src="artbook/thumbnail/aqua_t.jpg" alt="" title="" />
                 </a>
-                {{/each}}
+                <a href="artbook/aqua_2.png" data-aos="fade-up">
+                    <img class="artbook-page" srcset="artbook/thumbnail_small/aqua_2_t.jpg 150w, artbook/thumbnail/aqua_2_t.jpg 500w" sizes="(max-width: 700px) 150px, 500px" src="artbook/thumbnail/aqua_2_t.jpg" alt="" title="" />
+                </a>
+            </div>
+        </section>
+
+        <section id="cover-video">
+            <div class="sect-title" data-aos="fade-up">
+                <h1>Videos</h1>
+                <div class="sect-title-deco"></div>
+            </div>
+            <div class="cover-video-container" data-aos="fade-up">
+                <div class="video-container">
+                    <iframe title="" src="https://www.youtube-nocookie.com/embed/rFuyq-0D5l8"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="cover-video-container" data-aos="fade-up">
+                <div class="video-container">
+                    <iframe title="" src="https://www.youtube-nocookie.com/embed/IFLqOEw1mfc"
+                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
             </div>
         </section>
 
@@ -176,116 +149,48 @@
         <footer id="credits">
             <div class="credits-section">
                 <h4>Project Organizer</h4>
-                <p>Corneus/コロネウス</p>
-            </div>
-            <div class="credits-section">
-                <h4>Supervisor</h4>
-                <p>Kejiron</p>
-            </div>
-            <div class="credits-section">
-                <h4>Editor</h4>
-                <p>Kenneth</p>
-                <p>Luna</p>
-            </div>
-            <div class="credits-section">
-                <h4>Artbook Editor</h4>
-                <p>Terra</p>
-                <p>Shurararagi Kai</p>
-                <p>Ryuusei Kai Ni</p>
+                <p>Suifer @RushiferSuifer</p>
             </div>
             <div class="credits-section">
                 <h4>Translator</h4>
-                <p>rikunandakedo</p>
-                <p>Shiroemon translation</p>
-                <p>Respect</p>
+                <p>寝込みくり @nekondeimasu</p>
+                <p>Just Sam @SJK9123</p>
             </div>
             <div class="credits-section">
-                <h4>Art featured on artbook by</h4>
-                <p>Deyb</p>
-                <p>Merwin Senpai</p>
-                <p>Hollow Play</p>
-                <p>Leonardo Lauren</p>
-                <p>Adrian Ruiz</p>
-                <p>クネス</p>
-                <p>Himexinひめし</p>
-                <p>Turnip</p>
-                <p>Yui Chan</p>
-                <p>Anugmation【アヌンメーション】</p>
-                <p>Ryan Schultz</p>
-                <p>BioLightHero</p>
-                <p>Just Cinnamon</p>
-                <p>Kuuryusi</p>
-                <p>Janny</p>
-                <p>Chuef</p>
-                <p>Gudanko</p>
-                <p>Sylvira Vermillion</p>
-                <p>DnC</p>
-                <p>Mitz</p>
-                <p>Franz</p>
-                <p>Kaito Baito</p>
-                <p>魔法見つける羊magicfindsheep</p>
-                <p>Number 2</p>
-                <p>Lucky</p>
-                <p>KingBunny</p>
-                <p>Zilfier</p>
-                <p>Maxalex</p>
-                <p>KOFFII DRNKR</p>
-            </div>
-            <div class="credits-section">
-                <h4>Mixer</h4>
-                <p>Xatro</p>
-                <p>Daleth Delta</p>
-            </div>
-            <div class="credits-section">
-                <h4>Singer</h4>
-                <p>FaNE</p>
-                <p>Quinshin</p>
-                <p>Kazu (AdamaX)</p>
-                <p>Blizzarderper</p>
-                <p>ReaperNrt</p>
-                <p>RyuujinLee</p>
-                <p>Habakyan</p>
-                <p>LunarGhostz</p>
-                <p>Tensora</p>
-                <p>Toletroi</p>
-                <p>Dan Shikulai</p>
-                <p>Sehai-kun</p>
-                <p>NiteShade</p>
-                <p>Toriku</p>
+                <h4>Proofreader</h4>
+                <p>Rakuen @PrimeRakuen</p>
             </div>
             <div class="credits-section">
                 <h4>Website</h4>
                 <p>Warthog</p>
             </div>
             <div class="credits-section">
-                <h4>Favicon art</h4>
-                <p>DnC</p>
+                <h4>Art</h4>
+                <p>Niggy @Niggy138</p>
+                <p>ReSV1 @LionelKoh94</p>
+                <p>Ezurascarlet @EruzaScarlet1</p>
             </div>
             <div class="credits-section">
-                <h4>Chibi art</h4>
-                <p>Anugmation【アヌンメーション】</p>
-                <p>Mitz</p>
+                <h4>Editor</h4>
+                <p>Nanami @NekaNanae</p>
+            </div>
+            <div class="credits-section">
+                <h4>MMD Music</h4>
+                <p>DigiCak3 @Digicak3</p>
+            </div>
+            <div class="credits-section">
+                <h4>MMD</h4>
+                <p>Kyurosu @Kyurosuuuu</p>
             </div>
             <div class="credits-section">
                 <h4>Others</h4>
-                <p>FabGio</p>
-                <p>Deimos</p>
-                <p>WaifuMaster9000</p>
-                <p>ReSV1</p>
-                <p><a href="http://www.freepik.com" target="_blank" rel="noopener noreferrer">Cover castle gate designed
-                        by vectorpocket /
-                        Freepik</a></p>
-            </div>
-            <div class="credits-section">
-                <h4>Special thanks to</h4>
-                <p>Holo Resistance, Onion Land, Shiroemon Translation Team, HoloFans, and everyone who supports this project</p>
+                <p>Anonymous</p>
             </div>
         </footer>
 
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    {{!-- <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script> --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simple-lightbox.min.js"
         integrity="sha512-ZajFBgnksNp8Rj+AbmYe8ueOu45HiSjtf3QpqnRbHlq719m6VK0FkbYIqQ8wEnlVuJ1i9pC+z6Z9ewmDnUTMCg=="
         crossorigin="anonymous"></script>
