@@ -39,6 +39,10 @@ body {
     height: 95%;
 }
 
+#my-canvas {
+    position: absolute;
+}
+
 .placeholder {
     height: 50vh;
 }

@@ -22,6 +22,10 @@ function init() {
     credits_msnry.on('layoutComplete', function(){
         AOS.refresh();
     });
+
+    var confettiSettings = { target: 'my-canvas' };
+    var confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
 }
 
 init();
